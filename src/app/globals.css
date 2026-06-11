@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply bg-paper text-ink font-body antialiased; }
+  ::selection { @apply bg-teal text-navy; }
+}
+
+@layer components {
+  .container-rk { @apply mx-auto w-full max-w-5xl px-5; }
+  .btn-primary {
+    @apply inline-block rounded-md bg-navy px-6 py-3 font-display font-semibold text-white
+           transition hover:bg-navy-2 focus-visible:outline focus-visible:outline-2
+           focus-visible:outline-offset-2 focus-visible:outline-teal disabled:opacity-60;
+  }
+  .btn-teal {
+    @apply inline-block rounded-md bg-teal px-6 py-3 font-display font-semibold text-navy
+           transition hover:brightness-95 focus-visible:outline focus-visible:outline-2
+           focus-visible:outline-offset-2 focus-visible:outline-navy disabled:opacity-60;
+  }
+  .btn-ghost {
+    @apply inline-block rounded-md border border-navy/30 px-6 py-3 font-display font-semibold
+           text-navy transition hover:border-navy focus-visible:outline focus-visible:outline-2
+           focus-visible:outline-offset-2 focus-visible:outline-teal;
+  }
+  .microcopy { @apply mt-2 text-xs text-ink/60; }
+}
